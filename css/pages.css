@@ -1,0 +1,125 @@
+.paginas{
+	margin-right: 70px;
+}
+.title1{
+	max-width: 1050px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	flex-direction: column;
+	padding: 30px 0;
+}
+.title1>h1{
+	font-size: 39px;
+	font-weight: bold;
+	letter-spacing: -3px;
+}
+.title1>h4{
+	font-size: 30px;
+	font-weight: bold;	
+}
+.title1>h3{
+	font-size: 26px;
+	margin-top: none;
+	letter-spacing: -1px;
+}
+.title1>p{
+	line-height: 1.8;
+}
+.title1>img{
+	width: 100%
+}
+.ebooks{
+	max-width: 1050px;
+	margin-right: auto;
+	margin-left: auto;
+	border-color: #fff;
+	display: block;
+	flex-direction: column;
+	justify-content: center;
+}
+.book{
+	background-color: #666666;
+	padding: 30px;
+	margin-bottom: 20px;
+	box-shadow: 4px 4px 2px -2px gray;
+	clear: both;
+	height: 230px; 
+}
+.book>h1{
+	font-family: 'Zilla Slab', serif;
+	font-size: 20px;
+	color: #d8d116;
+}
+.book>p{
+	font-size: 14px;
+	font-weight: bold;
+	width: 500px;
+}
+.book>form{
+	float: right;
+	margin-bottom: 50px;
+}
+.book>form>input{
+	font-weight: bold;
+}
+.book>dl>dt{
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+}
+.book>dl>dd{
+	font-weight: bold;
+	color: #d1d1d1;
+	font-size: 14px;
+}
+.new1{
+	margin-top: 100px;
+	clear: both;
+}
+
+/*---atigo--*/
+.conteudo{
+	max-width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+	text-align: justify;
+}
+.conteudo2{
+	font-family: arial;
+	line-height: 1.8;
+}
+article{
+	font-family: arial;
+	line-height: 1.8;
+	float: left;
+	width: 700px;
+}
+aside{
+	width: 360px;
+	float: right;
+	margin-left: 20px;
+}
+aside>h5{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	border-bottom: 3px solid black;
+	margin-bottom: 10px;
+}
+.lista{
+	display: flex;
+	border-bottom: 1px solid black;	
+	margin: 40px 0;
+}
+.lista>a>img{
+	width: 90px;
+	margin-right:20px;
+}
+.link1{
+	float: left;
+	margin-top: 50px;
+	margin-right:50px;
+	clear: both;
+}

@@ -19,6 +19,7 @@ header{
 .menu a{
 	display: flex;
 	float: left;
+	text-decoration:none;
 }
 .menu a img{
 	margin-top: 10px;
@@ -33,6 +34,9 @@ header{
 	display: flex;
 	justify-content: flex-end;
 }
+.paginas{
+	margin-right: 70px;
+}
 ul.paginas{
 	list-style: none;
 	float: right;
@@ -43,19 +47,21 @@ ul.paginas{
 .paginas li a{
 	color: #474747;
 	font-size: 16px;
-	text-decoration: underline;
+	text-decoration: none;
 	padding-top: 10px;
 	font-weight: bold;
+	border-bottom: 3px solid #d8d116;
 }
 /*---------header -----------*/
 
 .capa{
-	width:100%;
+	max-width:1368px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-	background-image: url(../img/image1.png);
+	background-image: url(../img/ebook.jpg);
+	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 539px;
@@ -63,7 +69,7 @@ ul.paginas{
 	flex-direction: column;
 }
 .texto{
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.7);
 	width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -98,6 +104,10 @@ p.new2{
 .container>form{
 	text-align: center;
 	padding-bottom: 50px;
+	display: block;
+	flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
 }
 form>input[type="submit"]{
 	color: #474747;
@@ -107,7 +117,21 @@ form>input[type="submit"]{
 	font-size: 14px;
 	box-shadow: 0 4px 3px -2px gray;
 	border: none;
-	margin-left: 10px;
+	margin-bottom: 10px;
+	margin-right:10px;
+	width: 100px;	
+}
+form>input[type="name"]{
+	justify-content: center;
+	border-radius: 15px;
+	padding:5px 15px;
+	font-size: 14px;
+	box-shadow: 0 4px 3px -2px gray;
+	border: none;
+	text-align:center;
+	margin-bottom: 10px;
+	margin-right:10px;
+	width: 200px;	
 }
 form>input[type="email"]{
 	border-radius: 15px;
@@ -116,6 +140,9 @@ form>input[type="email"]{
 	box-shadow: 0 4px 3px -2px gray;
 	border: none;
 	text-align:center;	
+	margin-bottom: 10px;
+	margin-right:10px;
+	width: 200px;	
 }
 
 /*--  carousel --*/
@@ -135,7 +162,7 @@ div.container.carousel-inner{
 	text-decoration: none;
 }
 .carousel-caption>p{
-	font-size: 14px;
+	font-size: 20px;
 	color: #d1d1d1;
 }
 
@@ -153,7 +180,7 @@ div.copy{
 }
 .copy>h5{
 	padding-top:40px;
-	padding-left:30px;
+	padding-left:100px;
 	color: #fff;
 	font-size: 14px;
 }
@@ -161,6 +188,6 @@ div.social{
 	width: 50%;
 }
 .social>a{
-	padding:40px 50px 0 5px;
+	padding:40px 40px 0 0;
 	float: right;
 }
