@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,7 +12,7 @@ session_start();
 		<meta name="description" content="blog voltado para aplicação mobile de prospecção de novos jogadores de futebol.">
 		<meta name="kkeywords" content=" aplicativo, mobile, futebol, blog, blogger, FutBlogger, jogadores, time, campeonato, jogos">
 		<meta name="author" content="futblogger">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<title>FutBlogger</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -48,69 +45,52 @@ session_start();
 			</nav>	
 		</header>
 <!-- fim header -->
-
-		<div class="capa">
-			<div class="container">
+		<div class="container capa">
+			<!-- <div class="container"> -->
     			<div class="texto">	
-    				<h1>Guia definitivo para se tornar um jogador</h1>      
-    				<a href="pages/gratuitos.html">E-BOOK gratis!</a>
+    				<h1>Guia definitivo para se tornar um jogador<br/> E-BOOK grátis!</h1>      
+    				<form class="baixar_ebook" action="/recebe.php" method="POST">
+  						<input type="name" name="name" placeholder="Digite seu nome" required="name">
+  						<input type="email" name="email" placeholder="Digite seu e-mail" required="e-mail">
+  						<input type="submit" name="Baixar" value="Baixar">
+  					</form>  
     			</div>
-  			</div>
+  			<!-- </div> -->
 		</div>
-		<div class="container">
-  			<p class="new1">Receba nossa newsletter</p>      
-  			<p class="new2">Conteúdo sobre futebol toda semana no seu email!</p> 
-  			<?php
-			if(isset($_SESSION['msg'])){
-				echo $_SESSION['msg'];
-				unset ($_SESSION['msg']);
-			}
-  			?>
-  			<form action="/recebe.php" method="POST">
-  				<input type="name" name="name" placeholder="Digite seu nome" required="name">
-  				<input type="email" name="email" placeholder="Digite seu e-mail" required="e-mail">
-  				<input type="submit" name="Assinar" value="Assinar">
-  			</form>     
-		</div>
-<!-- fim reportagem capa -->
 		
+<!-- fim reportagem capa -->
+		<div class="home">	
+			<h1>Fique atualizado!</h1>
+		</div>
 		<div id="demo" class="carousel slide" data-ride="carousel">
   			<ul class="carousel-indicators">
 			    <li data-target="#demo" data-slide-to="0" class="active"></li>
 			    <li data-target="#demo" data-slide-to="1"></li>
 			    <li data-target="#demo" data-slide-to="2"></li>
-			    <li data-target="#demo" data-slide-to="3"></li>
   			</ul>
   			<div class="container carousel-inner">
     			<div class="carousel-item active">
-      				<img src="img/treino.jpg" alt="Treino de futebol: veja as principais técnicas para um alto desempenho." width="1100" height="500">
+      				<img src="img/cartola.png" alt="Cartola F.C. 2019: Dicas infalíveis para você superar seus amigos." width="1100" height="500">
       				<div class="carousel-caption">
-        				<a href="pages/page1.html">Treino de futebol:</a>
-        				<p><strong>Principais técnicas</strong></p>
+        				<a href="pages/cartola.html">Cartola F.C. 2019:</a>
+        				<p><strong>Dicas infalíveis para você superar seus amigos</strong></p>
       				</div>   
     			</div>
 			    <div class="carousel-item">
-			    	<img src="img/campeonato.jpg" alt="Campeonato de Futebol: como organizar um bom evento?" width="1100" height="500">
+			    	<img src="img/neymar.png" alt="história do craque neymar" width="1100" height="500">
 			      	<div class="carousel-caption">
-			        	<a href="pages/page2.html">Campeonato de Futebol:</a>
-			        	<p><strong>como organizar um bom evento.</strong></p>
+			        	<a href="pages/neymar.html">A história do craque Neymar</a>
+			        	<p><strong>Até agora foram 371 gols na carreira, 30 títulos conquistados, tudo isso com 27 anos de idade estamos falando de Neymar Jr.</strong></p>
 			      	</div>   
 			    </div>
 			    <div class="carousel-item">
-			    	<img src="img/regras.jpg" alt="entenda as principais regras do futebol, incluindo as novas regras que foram aprovadas em 2019." width="1100" height="500">
+			    	<img src="img/cur8.jpg" alt="10 Curiosidades da bola" width="1100" height="500">
 			      	<div class="carousel-caption">
-			        	<a href="pages/page3.html">Regras do futebol:</a>
-			        	<p><strong>entenda de uma vez por todas como o esporte funciona.</strong></p>
+			        	<a href="pages/curiosidades.html">10 Curiosidades da bola</a>
+			        	<p><strong></strong></p>
 			      	</div>   
 			    </div>
-			    <div class="carousel-item">
-			    	<img src="img/dicas.jpg" alt="peneira de Futebol: dicas infalíveis para ser destacado." width="1100" height="500">
-			      	<div class="carousel-caption">
-			        	<a href="pages/page4.html">Como se destacar em uma peneira de futebol?</a>
-			        	<p><strong>Confira nossas dicas infalíveis para mandar bem e ter boas chances de ser escolhido.</strong></p>
-			      	</div>   
-			    </div>
-  			</div>
+  		</div>
   			<a class="carousel-control-prev" href="#demo" data-slide="prev">
     			<span class="carousel-control-prev-icon"></span>
   			</a>
@@ -119,7 +99,36 @@ session_start();
  			</a>  
 		</div>
 <!-- fim carrosel -->
+		<div class="principal">
+			<div class="lista2">
+				<a href="pages/page3.html"><img src="img/regras.jpg" alt="entenda as principais regras do futebol, incluindo as novas regras que foram aprovadas em 2019."></a>
+				<p><strong>Regras do futebol: entenda de uma vez por todas como o esporte funciona.</strong></p>
+			</div>
+			<div class="lista2">
+				<a href="pages/page4.html"><img src="img/dicas.jpg" alt="peneira de Futebol: dicas infalíveis para ser destacado."></a>
+				<p><strong>Como se destacar em uma peneira de futebol? Saiba como!</strong></p>
+			</div>
+			<div class="lista2">
+				<a href="pages/page1.html"><img src="img/treino.jpg" alt="Treino de futebol: veja as principais técnicas para um alto desempenho."></a>
+				<p><strong>O que fazer para ter um treino de futebol de alto desempenho?</strong></p>
+			</div>
+			<div class="lista2">
+				<a href="pages/page2.html"><img src="img/campeonato.jpg" alt="Treino de futebol: veja as principais técnicas para um alto desempenho."></a>
+				<p><strong>Campeonato de futebol: como organizar um bom evento?</strong></p>
+			</div>
+		</div>
+<!-- fim da aside -->
 
+		<div class="container">
+  			<p class="new1">Receba nossa newsletter</p>
+  			<p class="new2">Conteúdo sobre futebol toda semana no seu email!</p> 
+  			<form action="/recebe.php" method="POST">
+  				<input type="name" name="name" placeholder="Digite seu nome" required="name">
+  				<input type="email" name="email" placeholder="Digite seu e-mail" required="e-mail">
+  				<input type="submit" name="Assinar" value="Assinar">
+  			</form>     
+		</div>
+<!-- fim da newsletter -->
 		<footer class="container">
 			<div class="copy">
 				<h5>© Desenvolvido em 2019 pela Turma do Bairro.</h5>

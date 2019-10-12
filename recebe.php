@@ -1,5 +1,4 @@
 <?php
-session_start();
 date_default_timezone_set('America/Sao_Paulo');
 include_once("connection/conexao.php");
 $ip = $_SERVER['REMOTE_ADDR'];
@@ -12,7 +11,6 @@ $string_sql = "INSERT INTO usuarios (id,email,nome,ip,data_hora) VALUES (null, '
 $resultado = mysqli_query($conn, $string_sql);
 
 if (mysqli_insert_id($conn)) {
-	$_SESSION['msg'] = "<p style='color:blue;'>Cadastrao realizado, aguarde o recebimento no e-mail informado.</p>"; 
 	header("Location: index.html");
 }else{
 	header("Location: index.html");
